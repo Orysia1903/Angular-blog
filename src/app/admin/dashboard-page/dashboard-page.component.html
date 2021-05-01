@@ -1,0 +1,32 @@
+<div *ngIf="posts; else loading">
+   <div class="form-control">
+       <input type="text" placeholder="Find a post..." [(ngModel)]="searchStr">
+   </div>
+   <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Author</th>
+                <th>Name</th>
+                <th>Date</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let post of posts | searchPosts:searchStr; let idx=index">
+                <td>{{ idx + 1 }}</td>
+                <td>{{ post.author }}</td>
+                <td>{{ post.title }}</td>
+                <td>{{ post.date | date:'medium'}}</td>
+                <td>
+                    <a (click)="remove(post.id)" class="delete-post">&times;</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<ng-template #loading>
+    <div class="preloader">
+        <div class="lds-circle"><div></div></div>
+    </div>
+</ng-template>

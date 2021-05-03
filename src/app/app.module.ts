@@ -9,13 +9,6 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { PostPageComponent } from './post-page/post-page.component';
 import { PostComponent } from './shared/components/post/post.component';
 import { SharedModule } from './shared/shared.module';
-// import { AuthInterceptor } from './shared/auth.interceptor';
-
-// const INTERCEPTOR_PROVIDER:Provider = {
-//   provide: HTTP_INTERCEPTORS,
-//   multi: true,
-//   useClass: AuthInterceptor
-// }
 
 @NgModule({
   declarations: [
@@ -31,7 +24,7 @@ import { SharedModule } from './shared/shared.module';
     SharedModule,
     HttpClientModule
   ],
-  // providers: [INTERCEPTOR_PROVIDER],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

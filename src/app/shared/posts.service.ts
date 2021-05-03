@@ -1,10 +1,10 @@
-import { HttpClient } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
-import { environment } from "src/environments/environment";
-import { Post } from "./interfaces";
-import { map } from "rxjs/operators";
-import { FbCreateResponse } from "./interfaces"
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { Post } from './interfaces';
+import { map } from 'rxjs/operators';
+import { FbCreateResponse } from './interfaces'
 
 @Injectable({providedIn: 'root'})
 export class PostsServices {
